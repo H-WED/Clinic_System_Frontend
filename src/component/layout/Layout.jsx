@@ -6,12 +6,14 @@ import "./Layout.scss";
 function Layout(props) {
   return (
     <div className="layout">
-      <Header loggedInUser={props.loggedInUser} />
+      <div className="content">
+        <div className="sidebar">
+          <Header loggedInUser={props.loggedInUser} />
 
-      <Navbar />
-
-      <main>{props.children}</main>
-
+          <Navbar />
+        </div>
+        <main>{props.children}</main>
+      </div>
       <Footer />
     </div>
   );
